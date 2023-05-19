@@ -117,8 +117,8 @@ module Webdrivers
         elsif System.platform == 'linux'
           'linux64'
         elsif System.platform == 'mac'
-          apple_arch = apple_m1_compatible?(driver_version) ? '_m1' : ''
-          "mac64#{apple_arch}"
+          apple_arch = apple_m1_compatible?(driver_version) ? '_arm' : ''
+          "mac#{apple_arch}64"
         else
           raise 'Failed to determine driver filename to download for your OS.'
         end
